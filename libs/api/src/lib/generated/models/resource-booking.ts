@@ -1,0 +1,42 @@
+/* tslint:disable */
+import { BrokenBusinessRule } from './broken-business-rule';
+import { IBusinessType } from './ibusiness-type';
+import { Resource } from './resource';
+import { ResourceBookingType } from './resource-booking-type';
+export interface ResourceBooking {
+  allProperties?: Array<string>;
+  attachedObjectId?: string;
+  bookingDays?: number;
+  bookingTypeDescription?: string;
+  brokenBusinessRules?: Array<BrokenBusinessRule>;
+  changedBy?: string;
+  changedTimestamp?: string;
+  countryCodeLocation?: string;
+  dependantObjects?: Array<IBusinessType>;
+  end?: string;
+  exchangeUniqueId?: string;
+  executionStatus?: string;
+  id?: number;
+  ignoreNullOrEmptyStringsInPropertyChangedEvent?: boolean;
+  isDirty?: boolean;
+  isDirtyWithDependantObjects?: boolean;
+  isMarkedForDeletion?: boolean;
+  isNew?: boolean;
+  isNotificationMessageNeeded?: boolean;
+  isTrackable?: boolean;
+  lat?: number;
+  location?: string;
+  locationCity?: string;
+  locationLatitude?: number;
+  locationLongitude?: number;
+  locationStreet?: string;
+  locationZip?: string;
+  lon?: number;
+  resource?: Resource;
+  resourceBookingType?: ResourceBookingType;
+  resourceBookingTypeCode?: string;
+  resourceId?: number;
+  start?: string;
+  subject?: string;
+  text?: string;
+}

@@ -1,0 +1,18 @@
+/* tslint:disable */
+import { BrokenBusinessRule } from './broken-business-rule';
+import { IBusinessType } from './ibusiness-type';
+export interface Salesman {
+  allProperties?: Array<string>;
+  brokenBusinessRules?: Array<BrokenBusinessRule>;
+  code?: string;
+  comission?: number;
+  dependantObjects?: Array<IBusinessType>;
+  ignoreNullOrEmptyStringsInPropertyChangedEvent?: boolean;
+  isDefault?: boolean;
+  isDirty?: boolean;
+  isDirtyWithDependantObjects?: boolean;
+  isMarkedForDeletion?: boolean;
+  isNew?: boolean;
+  isTrackable?: boolean;
+  name?: string;
+}

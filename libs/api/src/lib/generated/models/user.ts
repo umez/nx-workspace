@@ -1,0 +1,44 @@
+/* tslint:disable */
+import { BrokenBusinessRule } from './broken-business-rule';
+import { IBusinessType } from './ibusiness-type';
+import { Employee } from './employee';
+import { Right } from './right';
+import { SalesAreaUser } from './sales-area-user';
+import { UserGroup } from './user-group';
+export interface User {
+  adDomain?: string;
+  adPassword?: string;
+  adUsername?: string;
+  allProperties?: Array<string>;
+  brokenBusinessRules?: Array<BrokenBusinessRule>;
+  dependantObjects?: Array<IBusinessType>;
+  dmsAdmin?: boolean;
+  email?: string;
+  employee?: Employee;
+  employeeId?: string;
+  fax?: string;
+  firstName?: string;
+  fullName?: string;
+  id?: string;
+  ignoreNullOrEmptyStringsInPropertyChangedEvent?: boolean;
+  initials?: string;
+  isActive?: boolean;
+  isDirty?: boolean;
+  isDirtyWithDependantObjects?: boolean;
+  isMarkedForDeletion?: boolean;
+  isNew?: boolean;
+  isSuperUser?: boolean;
+  isTrackable?: boolean;
+  lastLoginDate?: string;
+  lostPasswordAuthCode?: string;
+  mobile?: string;
+  name?: string;
+  password?: string;
+  phone?: string;
+  plainADPassword?: string;
+  plainPassword?: string;
+  rights?: Array<Right>;
+  role?: string;
+  salesAreaUser?: Array<SalesAreaUser>;
+  userGroups?: Array<UserGroup>;
+}

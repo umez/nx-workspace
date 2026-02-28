@@ -1,0 +1,25 @@
+@if (error()) {
+  <eh-widget-error  class="error" [error]="error()"></eh-widget-error>
+
+}
+<div class="title mat-title">Backlog Widget</div>
+<mat-divider></mat-divider>
+<section class="content">
+  <mat-icon class="icon" color="primary">show_chart</mat-icon>
+  @if (tasks()) {
+  <ul class="tasks">
+    @for (task of tasks(); track $index) {
+      <li class="task mat-body">
+        {{ task.title }}
+      </li>
+    }
+
+    @if (tasks.length === 0) {
+      <li class="no-data mat-caption">
+        No Tasks In Backlog
+      </li>
+    }
+  </ul>
+}
+  <button (click)="addTask()" mat-stroked-button color="primary" class="add-new-task">Add new Task</button>
+</section>

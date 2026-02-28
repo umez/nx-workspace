@@ -1,0 +1,28 @@
+{
+  "name": "api-client",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "api-client/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "api-client/ng-package.json",
+        "tsConfig": "api-client/tsconfig.lib.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": " https://ase-kameon-gateway-dev-mey-001.azurewebsites.net/swagger/v1/swagger.json"
+        },
+        "development": {}
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

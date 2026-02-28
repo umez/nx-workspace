@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "api/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+ "targets": {
+    "swagger-gen": {
+      "executor": "nx:run-commands",
+      "configurations": {
+        "int": {
+          "command": "ng-swagger-gen -c api/src/swagger.config.json -i https://ase-kameon-gateway-dev-mey-001.azurewebsites.net/swagger/v1/swagger.json"
+
+        }
+      },
+      "defaultConfiguration": "int"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
